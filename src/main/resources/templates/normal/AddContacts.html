@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="normal/base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+	integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+	integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	crossorigin="anonymous"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+	integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	crossorigin="anonymous"></script>
+<link rel="stylesheet" th:href="@{/css/Style.css}">
+<title th:text="${title}"></title>
+</head>
+<body>
+	<section>
+		<div class="container">
+			<div class="card contactform">
+			
+			<h1 class="text-center" style="padding-bottom: 30px;">Add Contact Form</h1>
+			<div class="alert alert-primary" role="alert" th:if="${success}">
+              <h5 th:text="${success}"></h5>
+			</div>
+			<div class="alert alert-danger" role="alert" th:if="${error}">
+              <h5 th:text="${error}"></h5>
+			</div>
+				<form th:action="@{/user/process-contact}" method="post" th:object="${contact}">
+					<div class="form-group">
+						<label for="name">First Name</label> <input
+							type="text" class="form-control" id="name"
+							aria-describedby="name" name="name" th:value="${contact.name}" placeholder="Enter first name" > 
+					</div>
+					<div class="form-group">
+						<label for="secondName">Last Name</label> <input
+							type="text" class="form-control" id="secondName" name="secondName" th:value="${contact.secondName}"
+							aria-describedby="secondName" placeholder="Enter Last Name"> 
+					</div>
+					<div class="form-group">
+						<label for="nickname">Nick Name</label> <input
+							type="text" class="form-control" id="nick name" th:value="${contact.nickname}" name="nickname"
+							aria-describedby="nickname" placeholder="Enter Nick name"> 
+					</div>
+					<div class="form-group">
+						<label for="exampleInputEmail1">Email address</label> <input
+							type="email" class="form-control" id="exampleInputEmail1" th:value="${contact.email}" name="email"
+							aria-describedby="emailHelp" placeholder="Enter email"> 
+					</div>
+					<div class="form-group">
+						<label for="exampleInputEmail1">Phone Num</label> <input
+							type="text" class="form-control" id="phoneString" th:value="${contact.phoneString}" name="phoneString"
+							aria-describedby="phoneString" placeholder="Enter Phone number"> 
+					</div>
+					<div class="form-group">
+						<label for="description">description</label> <textarea
+							type="text" class="form-control" id="description" th:value="${contact.description}" name="description"
+							placeholder="Description...." rows="6" cols="20"></textarea>
+					</div>
+					<div class="text-center">
+					<button type="submit" class="btn btn-primary">Submit</button>
+					<button type="reset" class="btn btn-warning">Reset</button>
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</section>
+</body>
+</html>

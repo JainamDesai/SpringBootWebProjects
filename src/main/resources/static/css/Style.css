@@ -1,0 +1,209 @@
+body {
+	background: #b3ffb3!important;
+	
+}
+.bg-primary{
+	background: Orange;
+}
+
+.banner{
+	background: linear-gradient(rgba(110,20,100,0.8),rgba(120,100,20,0.8)),url(../img/banner.jpg),url(../images/contactmanager.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 93vh;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	margin: 0px;
+	
+}
+.my-card{
+	padding: 20px;
+	background: white;
+	
+	
+}
+@import url(https://fonts.googleapis.com/css?family=Exo:100,200,400);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+
+
+
+.body{
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background-image: url(http://ginva.com/wp-content/uploads/2012/07/city-skyline-wallpapers-008.jpg);
+	background-size: cover;
+	-webkit-filter: blur(5px);
+	z-index: 0;
+}
+
+.grad{
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+	z-index: 1;
+	opacity: 0.7;
+}
+
+.header{
+	position: absolute;
+	top: calc(50% - 35px);
+	left: calc(50% - 255px);
+	z-index: 2;
+}
+
+.header div{
+	float: left;
+	color: #004040;
+	font-family: 'Exo', sans-serif;
+	font-size: 35px;
+	font-weight: 200;
+}
+
+.header div span{
+	color: #5379fa !important;
+}
+
+.login{
+	position: absolute;
+	top: calc(50% - 75px);
+	left: calc(50% - 50px);
+	height: 150px;
+	width: 350px;
+	padding: 10px;
+	z-index: 2;
+}
+
+.login input[type=text]{
+	width: 250px;
+	height: 30px;
+	background: transparent; 
+	border-bottom:3px solid rgba(55,55,255,0.6);
+	border-left:none;
+	border-right:none;
+	border-top:none;
+	border-radius: 2px;
+	color: black;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+}
+
+.login input[type=password]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border-bottom:3px solid rgba(55,55,255,0.6);
+	border-left:none;
+	border-right:none;
+	border-top:none;
+	border-radius: 2px;
+	color: black;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10px;
+}
+
+.login input[type=button]{
+	width: 260px;
+	height: 35px;
+	background: #fff;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	color: black;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	position: relative;
+	top:20px;
+	margin-bottom: 30px;
+}
+
+.login input[type=button]:hover{
+	opacity: 0.8;
+}
+
+.login input[type=button]:active{
+	opacity: 0.9;
+}
+
+.login input[type=text]:focus{
+	outline: none;
+	border-bottom: 1px solid rgba(55,55,55,0.9);
+}
+
+.login input[type=password]:focus{
+	outline: none;
+	border-bottom: 1px solid rgba(55,55,55,0.9);
+}
+
+.login input[type=button]:focus{
+	outline: none;
+}
+
+::-webkit-input-placeholder{
+   color: rgba(235,125,125,0.6);
+}
+
+::-moz-input-placeholder{
+   color: rgba(255,25,2,0.6);
+}
+.sidebar {
+ 
+  width: 200px;
+  background-color: #f85c9a;
+  position: fixed;
+  height: 100%;
+  padding-top: 50px;
+
+}
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+.sidebar a:hover {
+	background: black;
+	color: white;
+}	
+.content{
+	padding-left: 10%;
+	
+}
+.contactform{
+	position: relative
+	top: 10px;
+	width: 80%;
+	height: 80%;
+	background: #DD34D5;
+	opacity: 0.9;
+	font-family: Arial;
+	margin: 20px;
+	color: white;
+}
+.about{
+	font-family: Arial;
+	text-decoration: none;
+	background: fuchsia;
+	border-radius: 30px;
+	border-bottom-right-radius:50px;
+	color: white;
+}
+
+
